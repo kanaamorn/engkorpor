@@ -9,9 +9,12 @@
 
 @theme inline {
     --font-sans:
-        Instrument Sans, ui-sans-serif, system-ui, sans-serif,
+        "Noto Sans Thai","Instrument Sans", ui-sans-serif, system-ui, sans-serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
+
+     /* Optional: Create a specific class for Thai if you don't want it global */
+    --font-noto: "Noto Sans Thai", sans-serif;
 
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
@@ -83,9 +86,13 @@
     body,
     html {
         --font-sans:
-            'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
+            "Noto Sans Thai","Instrument Sans", ui-sans-serif, system-ui, sans-serif,
             'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
             'Noto Color Emoji';
+    }
+    .font-var {
+        font-variation-settings: 'wght' var(--wght, 400);
+        transition: font-variation-settings 0.3s ease;
     }
 }
 
