@@ -14,4 +14,8 @@ Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/liff', function () {
+    return inertia('Liff/Index');
+})->name('liff.index');
+
 require __DIR__.'/settings.php';
